@@ -1,0 +1,6 @@
+{
+  "name": "Curio: Historical Detective Archives",
+  "description": "Tactile archival mystery solving applet where detectives inspect vintage primary-source evidence, decipher historical enigmas, and submit forensic verdicts.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

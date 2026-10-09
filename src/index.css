@@ -1,0 +1,278 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --color-surface: #1b110b;
+    --color-surface-dim: #1b110b;
+    --color-surface-bright: #43372f;
+    --color-surface-container-lowest: #150c07;
+    --color-surface-container-low: #241913;
+    --color-surface-container: #281d17;
+    --color-surface-container-high: #332721;
+    --color-surface-container-highest: #3f322b;
+    --color-on-surface: #f3ded4;
+    --color-on-surface-variant: #dfbfbc;
+    --color-inverse-surface: #f3ded4;
+    --color-inverse-on-surface: #3a2e27;
+    --color-outline: #a68a87;
+    --color-outline-variant: #58413f;
+    --color-surface-tint: #ffb3ad;
+    --color-primary: #ffb3ad;
+    --color-on-primary: #680109;
+    --color-primary-container: #8b1e1e;
+    --color-on-primary-container: #ff9d95;
+    --color-inverse-primary: #aa3531;
+    --color-secondary: #e9c176;
+    --color-on-secondary: #412d00;
+    --color-secondary-container: #604403;
+    --color-on-secondary-container: #dab36a;
+    --color-tertiary: #d7c59a;
+    --color-on-tertiary: #3a2f11;
+    --color-tertiary-container: #bba980;
+    --color-on-tertiary-container: #4a3e1e;
+    --color-error: #ffb4ab;
+    --color-on-error: #690005;
+    --color-error-container: #93000a;
+    --color-on-error-container: #ffdad6;
+    --color-primary-fixed: #ffdad6;
+    --color-primary-fixed-dim: #ffb3ad;
+    --color-on-primary-fixed: #410003;
+    --color-on-primary-fixed-variant: #891c1d;
+    --color-secondary-fixed: #ffdea5;
+    --color-secondary-fixed-dim: #e9c176;
+    --color-on-secondary-fixed: #261900;
+    --color-on-secondary-fixed-variant: #5d4201;
+    --color-tertiary-fixed: #f4e1b4;
+    --color-tertiary-fixed-dim: #d7c59a;
+    --color-on-tertiary-fixed: #241a01;
+    --color-on-tertiary-fixed-variant: #524525;
+    --color-background: #1b110b;
+    --color-on-background: #f3ded4;
+    --color-surface-variant: #3f322b;
+  }
+
+  html, body {
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    background-color: #1b110b;
+    color: #f3ded4;
+    font-family: 'Courier Prime', monospace;
+    overflow-x: hidden;
+  }
+
+  .pb-safe {
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  .pt-safe {
+    padding-top: env(safe-area-inset-top, 0px);
+  }
+}
+
+/* Custom font styling utilities matching the design system */
+.font-headline-xl {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 34px;
+  line-height: 40px;
+  letter-spacing: -0.02em;
+  font-weight: 700;
+}
+.font-headline-xl-mobile {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 26px;
+  line-height: 32px;
+  letter-spacing: -0.01em;
+  font-weight: 700;
+}
+.font-headline-lg {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 24px;
+  line-height: 30px;
+  letter-spacing: -0.01em;
+  font-weight: 600;
+}
+.font-headline-md {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 20px;
+  line-height: 26px;
+  letter-spacing: 0em;
+  font-weight: 600;
+}
+.font-title-sm {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 17px;
+  line-height: 22px;
+  letter-spacing: 0.01em;
+  font-weight: 600;
+}
+.font-label-brass {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 11px;
+  line-height: 14px;
+  letter-spacing: 0.08em;
+  font-weight: 700;
+}
+.font-body-lg {
+  font-family: 'Courier Prime', monospace;
+  font-size: 15px;
+  line-height: 22px;
+  letter-spacing: 0em;
+  font-weight: 400;
+}
+.font-body-md {
+  font-family: 'Courier Prime', monospace;
+  font-size: 13px;
+  line-height: 19px;
+  letter-spacing: 0em;
+  font-weight: 400;
+}
+.font-body-sm {
+  font-family: 'Courier Prime', monospace;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.01em;
+  font-weight: 400;
+}
+.font-label-stamp {
+  font-family: 'Courier Prime', monospace;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.14em;
+  font-weight: 700;
+}
+.font-caption-forensic {
+  font-family: 'Courier Prime', monospace;
+  font-size: 11px;
+  line-height: 14px;
+  letter-spacing: 0.02em;
+  font-weight: 400;
+}
+
+/* Custom Spacing Helpers */
+.px-margin {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+.px-gutter {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+.gap-space-xs { gap: 0.25rem; }
+.gap-space-sm { gap: 0.5rem; }
+.gap-space-md { gap: 0.875rem; }
+.gap-space-lg { gap: 1.25rem; }
+.gap-space-xl { gap: 1.75rem; }
+
+.p-space-xs { padding: 0.25rem; }
+.p-space-sm { padding: 0.5rem; }
+.p-space-md { padding: 0.875rem; }
+.p-space-lg { padding: 1.25rem; }
+.p-space-xl { padding: 1.75rem; }
+
+.py-space-xs { padding-top: 0.25rem; padding-bottom: 0.25rem; }
+.py-space-sm { padding-top: 0.5rem; padding-bottom: 0.5rem; }
+.py-space-md { padding-top: 0.875rem; padding-bottom: 0.875rem; }
+.py-space-lg { padding-top: 1.25rem; padding-bottom: 1.25rem; }
+
+.px-space-xs { padding-left: 0.25rem; padding-right: 0.25rem; }
+.px-space-sm { padding-left: 0.5rem; padding-right: 0.5rem; }
+.px-space-md { padding-left: 0.875rem; padding-right: 0.875rem; }
+.px-space-lg { padding-left: 1.25rem; padding-right: 1.25rem; }
+
+.pt-space-xs { padding-top: 0.25rem; }
+.pt-space-sm { padding-top: 0.5rem; }
+.pt-space-md { padding-top: 0.875rem; }
+.pt-space-lg { padding-top: 1.25rem; }
+.pt-space-xl { padding-top: 1.75rem; }
+
+.pb-space-xs { padding-bottom: 0.25rem; }
+.pb-space-sm { padding-bottom: 0.5rem; }
+.pb-space-md { padding-bottom: 0.875rem; }
+.pb-space-lg { padding-bottom: 1.25rem; }
+.pb-space-xl { padding-bottom: 1.75rem; }
+
+.mt-space-xs { margin-top: 0.25rem; }
+.mt-space-sm { margin-top: 0.5rem; }
+.mt-space-md { margin-top: 0.875rem; }
+.mt-space-lg { margin-top: 1.25rem; }
+.mt-space-xl { margin-top: 1.75rem; }
+
+.mb-space-xs { margin-bottom: 0.25rem; }
+.mb-space-sm { margin-bottom: 0.5rem; }
+.mb-space-md { margin-bottom: 0.875rem; }
+.mb-space-lg { margin-bottom: 1.25rem; }
+.mb-space-xl { margin-bottom: 1.75rem; }
+
+.space-y-space-xs > :not([hidden]) ~ :not([hidden]) { --tw-space-y-reverse: 0; margin-top: calc(0.25rem * calc(1 - var(--tw-space-y-reverse))); margin-bottom: calc(0.25rem * var(--tw-space-y-reverse)); }
+.space-y-space-sm > :not([hidden]) ~ :not([hidden]) { --tw-space-y-reverse: 0; margin-top: calc(0.5rem * calc(1 - var(--tw-space-y-reverse))); margin-bottom: calc(0.5rem * var(--tw-space-y-reverse)); }
+.space-y-space-md > :not([hidden]) ~ :not([hidden]) { --tw-space-y-reverse: 0; margin-top: calc(0.875rem * calc(1 - var(--tw-space-y-reverse))); margin-bottom: calc(0.875rem * var(--tw-space-y-reverse)); }
+.space-y-space-lg > :not([hidden]) ~ :not([hidden]) { --tw-space-y-reverse: 0; margin-top: calc(1.25rem * calc(1 - var(--tw-space-y-reverse))); margin-bottom: calc(1.25rem * var(--tw-space-y-reverse)); }
+
+/* Color utilities for Tailwind */
+.bg-surface { background-color: var(--color-surface); }
+.bg-surface-dim { background-color: var(--color-surface-dim); }
+.bg-surface-bright { background-color: var(--color-surface-bright); }
+.bg-surface-container-lowest { background-color: var(--color-surface-container-lowest); }
+.bg-surface-container-low { background-color: var(--color-surface-container-low); }
+.bg-surface-container { background-color: var(--color-surface-container); }
+.bg-surface-container-high { background-color: var(--color-surface-container-high); }
+.bg-surface-container-highest { background-color: var(--color-surface-container-highest); }
+.bg-primary { background-color: var(--color-primary); }
+.bg-primary-container { background-color: var(--color-primary-container); }
+.bg-primary-fixed { background-color: var(--color-primary-fixed); }
+.bg-secondary { background-color: var(--color-secondary); }
+.bg-secondary-container { background-color: var(--color-secondary-container); }
+.bg-secondary-fixed { background-color: var(--color-secondary-fixed); }
+.bg-secondary-fixed-dim { background-color: var(--color-secondary-fixed-dim); }
+.bg-tertiary { background-color: var(--color-tertiary); }
+.bg-tertiary-container { background-color: var(--color-tertiary-container); }
+.bg-tertiary-fixed { background-color: var(--color-tertiary-fixed); }
+.bg-error { background-color: var(--color-error); }
+.bg-error-container { background-color: var(--color-error-container); }
+
+.text-surface { color: var(--color-surface); }
+.text-on-surface { color: var(--color-on-surface); }
+.text-on-surface-variant { color: var(--color-on-surface-variant); }
+.text-primary { color: var(--color-primary); }
+.text-on-primary { color: var(--color-on-primary); }
+.text-on-primary-container { color: var(--color-on-primary-container); }
+.text-primary-fixed { color: var(--color-primary-fixed); }
+.text-primary-fixed-dim { color: var(--color-primary-fixed-dim); }
+.text-on-primary-fixed-variant { color: var(--color-on-primary-fixed-variant); }
+.text-secondary { color: var(--color-secondary); }
+.text-on-secondary { color: var(--color-on-secondary); }
+.text-on-secondary-container { color: var(--color-on-secondary-container); }
+.text-secondary-fixed { color: var(--color-secondary-fixed); }
+.text-tertiary { color: var(--color-tertiary); }
+.text-on-tertiary { color: var(--color-on-tertiary); }
+.text-on-tertiary-container { color: var(--color-on-tertiary-container); }
+.text-tertiary-fixed { color: var(--color-tertiary-fixed); }
+.text-on-tertiary-fixed { color: var(--color-on-tertiary-fixed); }
+.text-on-tertiary-fixed-variant { color: var(--color-on-tertiary-fixed-variant); }
+.text-outline { color: var(--color-outline); }
+.text-outline-variant { color: var(--color-outline-variant); }
+.text-error { color: var(--color-error); }
+
+.border-outline { border-color: var(--color-outline); }
+.border-outline-variant { border-color: var(--color-outline-variant); }
+
+/* Material Symbols font settings */
+.material-symbols-outlined {
+  font-family: 'Material Symbols Outlined';
+  font-weight: normal;
+  font-style: normal;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Custom scrollbar hiding */
+::-webkit-scrollbar {
+  display: none;
+}
